@@ -32,13 +32,13 @@ namespace TEST
         }
         private static async void send_form(string login , string password)
         {
+            string url = "http://192.168.45.104:5000/api/login";
             string data = $"{{\"name\":\"{login}\",\"email\":\"{password}\"}}";
             byte[] dataBytes = Encoding.UTF8.GetBytes(data);
             var client = new HttpClient();
-            var response = await client.PostAsync("http://192.168.45.104:5000/api/login", new StringContent(JsonConvert.SerializeObject(new { param1 = login, param2 = password }), Encoding.UTF8, "application/json"));
+            var response = await client.PostAsync(url, new StringContent(JsonConvert.SerializeObject(new { param1 = login, param2 = password }), Encoding.UTF8, "application/json"));
             var content = await response.Content.ReadAsStringAsync();
             var result = JsonConvert.DeserializeObject<Dictionary<string, string>>(content);
-            string url = "http://192.168.45.104:5000/api/login";
             HttpWebRequest request = (HttpWebRequest)WebRequest.Create(url);
             request.Method = "POST";
             request.ContentType = "application/json";
