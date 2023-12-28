@@ -223,6 +223,57 @@
     <AppxPackagedFile Include="C:\Users\Andy\.nuget\packages\microsoft.windows.sdk.net.ref\10.0.19041.31\lib\net6.0\WinRT.Runtime.dll">
       <PackagePath>WinRT.Runtime.dll</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Andy\.nuget\packages\avalonia\11.0.5\lib\net6.0\Avalonia.Base.dll">
+      <PackagePath>Avalonia.Base.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Andy\.nuget\packages\avalonia\11.0.5\lib\net6.0\Avalonia.Controls.dll">
+      <PackagePath>Avalonia.Controls.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Andy\.nuget\packages\avalonia\11.0.5\lib\net6.0\Avalonia.DesignerSupport.dll">
+      <PackagePath>Avalonia.DesignerSupport.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Andy\.nuget\packages\avalonia\11.0.5\lib\net6.0\Avalonia.Dialogs.dll">
+      <PackagePath>Avalonia.Dialogs.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Andy\.nuget\packages\avalonia\11.0.5\lib\net6.0\Avalonia.Markup.Xaml.dll">
+      <PackagePath>Avalonia.Markup.Xaml.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Andy\.nuget\packages\avalonia\11.0.5\lib\net6.0\Avalonia.Markup.dll">
+      <PackagePath>Avalonia.Markup.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Andy\.nuget\packages\avalonia\11.0.5\lib\net6.0\Avalonia.Metal.dll">
+      <PackagePath>Avalonia.Metal.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Andy\.nuget\packages\avalonia\11.0.5\lib\net6.0\Avalonia.MicroCom.dll">
+      <PackagePath>Avalonia.MicroCom.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Andy\.nuget\packages\avalonia\11.0.5\lib\net6.0\Avalonia.OpenGL.dll">
+      <PackagePath>Avalonia.OpenGL.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Andy\.nuget\packages\avalonia\11.0.5\lib\net6.0\Avalonia.dll">
+      <PackagePath>Avalonia.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Andy\.nuget\packages\avalonia.remote.protocol\11.0.5\lib\net6.0\Avalonia.Remote.Protocol.dll">
+      <PackagePath>Avalonia.Remote.Protocol.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Andy\.nuget\packages\colortextblock.avalonia\11.0.2\lib\net6.0\ColorTextBlock.Avalonia.dll">
+      <PackagePath>ColorTextBlock.Avalonia.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Andy\.nuget\packages\dialoghost.avalonia\0.7.7\lib\netstandard2.0\DialogHost.Avalonia.dll">
+      <PackagePath>DialogHost.Avalonia.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Andy\.nuget\packages\markdown.avalonia.tight\11.0.2\lib\net6.0\Markdown.Avalonia.dll">
+      <PackagePath>Markdown.Avalonia.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Andy\.nuget\packages\messagebox\2.1.0\lib\net461\Gat.Controls.MessageBox.dll">
+      <PackagePath>Gat.Controls.MessageBox.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Andy\.nuget\packages\messagebox.avalonia\3.1.5.1\lib\netstandard2.0\MsBox.Avalonia.dll">
+      <PackagePath>MsBox.Avalonia.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Andy\.nuget\packages\microcom.runtime\0.11.0\lib\net5.0\MicroCom.Runtime.dll">
+      <PackagePath>MicroCom.Runtime.dll</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Andy\.nuget\packages\microsoft.extensions.configuration\8.0.0\lib\net8.0\Microsoft.Extensions.Configuration.dll">
       <PackagePath>Microsoft.Extensions.Configuration.dll</PackagePath>
     </AppxPackagedFile>
@@ -327,6 +378,9 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Andy\.nuget\packages\newtonsoft.json.schema\3.0.15\lib\netstandard2.0\Newtonsoft.Json.Schema.dll">
       <PackagePath>Newtonsoft.Json.Schema.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Andy\.nuget\packages\system.reactive\6.0.0\lib\net6.0-windows10.0.19041\System.Reactive.dll">
+      <PackagePath>System.Reactive.dll</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Andy\.nuget\packages\microsoft.maui.controls.core\8.0.3\lib\net8.0-windows10.0.19041\ar\Microsoft.Maui.Controls.resources.dll">
       <PackagePath>ar\Microsoft.Maui.Controls.resources.dll</PackagePath>

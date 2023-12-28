@@ -6,6 +6,8 @@ using System;
 using System.IO;
 using System.Net;
 using System.Text;
+using Microsoft.Maui.Controls;
+
 
 namespace TEST
 {
@@ -26,10 +28,12 @@ namespace TEST
             send_form(login, password);
 
         }
-        private void registration_Button_Clicked(object sender, EventArgs e)
+        private async void registration_Button_Clicked(object sender, EventArgs e)
         {
-            
+            await Shell.Current.GoToAsync("registrationPage");
         }
+
+
         private static async void send_form(string login , string password)
         {
             string url = "http://192.168.45.104:5000/api/login";

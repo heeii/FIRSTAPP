@@ -1,7 +1,7 @@
 using Newtonsoft.Json;
 using System.Net;
 using System.Text;
-using System.Windows.Forms;
+using Microsoft.Maui.Controls;
 
 namespace TEST;
 
@@ -12,7 +12,7 @@ public partial class registrationPage : ContentPage
     string password = " ";
     string check_Password=" ";
     string email = " ";
-    string str_alert = " ";
+    string s_aler = " ";
     public registrationPage()
     {
         InitializeComponent();
@@ -30,40 +30,43 @@ public partial class registrationPage : ContentPage
 
         return false;
     }
-    private void login_Button_Clicked(object sender, EventArgs e)
+    private void registration_btn_Clicked(object sender, EventArgs e)
     {
         login = Login_Place.Text;
         password = Password_Place.Text;
         check_Password= Password_Check_Place.Text;
         email = email_Place.Text;
-        if (password == check_Password){
+        if (password == check_Password & password !=""){
             char ch = '@';
             bool isContain = IsContainChar(email, ch);
             if (isContain){
-                send_form(login, password);
+                send_form(login, password,email);
             }
             else { 
-                str_alert = "email don`t correct";
-                Alert(str_alert);
+                s_aler = "email don`t correct";
+                Alert(s_aler);
             }
             
         }
         else {
-            str_alert = "password don`t correct";
-            Alert(str_alert); 
+            s_aler = "password don`t correct";
+            Alert(s_aler); 
         }
         
         
 
     }
-    private void Alert(string str_alert);
-    private static async void send_form(string login, string password)
+    private async void Alert(string s_alert)
+    {
+        await DisplayAlert("Sorry!", s_alert, "OK");
+    }
+    private static async void send_form(string login, string password, string email)
     {
         string url = "http://192.168.45.104:5000/api/registration";
         string data = $"{{\"name\":\"{login}\",\"email\":\"{password}\"}}";
         byte[] dataBytes = Encoding.UTF8.GetBytes(data);
         var client = new HttpClient();
-        var response = await client.PostAsync(url, new StringContent(JsonConvert.SerializeObject(new { log = login, pas = password }), Encoding.UTF8, "application/json"));
+        var response = await client.PostAsync(url, new StringContent(JsonConvert.SerializeObject(new { log = login, pas = password, e_mail = email  }), Encoding.UTF8, "application/json"));
         var content = await response.Content.ReadAsStringAsync();
         var result = JsonConvert.DeserializeObject<Dictionary<string, string>>(content);
         HttpWebRequest request = (HttpWebRequest)WebRequest.Create(url);
@@ -78,8 +81,5 @@ public partial class registrationPage : ContentPage
             }
         }
     }
-    private void registration_btn_Clicked(object sender, EventArgs e)
-    {
-
-    }
+    
 }
