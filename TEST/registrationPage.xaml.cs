@@ -2,6 +2,7 @@ using Newtonsoft.Json;
 using System.Net;
 using System.Text;
 using Microsoft.Maui.Controls;
+using System.Net.Sockets;
 
 namespace TEST;
 
@@ -13,6 +14,7 @@ public partial class registrationPage : ContentPage
     string check_Password=" ";
     string email = " ";
     string s_aler = " ";
+    
     public registrationPage()
     {
         InitializeComponent();
@@ -30,8 +32,10 @@ public partial class registrationPage : ContentPage
 
         return false;
     }
-    private void registration_btn_Clicked(object sender, EventArgs e)
+    private async void registration_btn_Clicked(object sender, EventArgs e)
     {
+
+        
         login = Login_Place.Text;
         password = Password_Place.Text;
         check_Password= Password_Check_Place.Text;
@@ -40,7 +44,9 @@ public partial class registrationPage : ContentPage
             char ch = '@';
             bool isContain = IsContainChar(email, ch);
             if (isContain){
-                send_form(login, password,email);
+                ;
+                string get_sand= await send_form(login, password, email);
+                Alert(get_sand);
             }
             else { 
                 s_aler = "email don`t correct";
@@ -60,26 +66,20 @@ public partial class registrationPage : ContentPage
     {
         await DisplayAlert("Sorry!", s_alert, "OK");
     }
-    private static async void send_form(string login, string password, string email)
+    private async Task<string>  send_form(string login, string password, string email)
     {
         string url = "http://192.168.45.104:5000/api/registration";
-        string data = $"{{\"name\":\"{login}\",\"email\":\"{password}\"}}";
-        byte[] dataBytes = Encoding.UTF8.GetBytes(data);
         var client = new HttpClient();
-        var response = await client.PostAsync(url, new StringContent(JsonConvert.SerializeObject(new { log = login, pas = password, e_mail = email  }), Encoding.UTF8, "application/json"));
+        var response = await client.PostAsync(url, new StringContent(JsonConvert.SerializeObject(new { log = login, pas = password, e_mail = email }), Encoding.UTF8, "application/json"));
         var content = await response.Content.ReadAsStringAsync();
         var result = JsonConvert.DeserializeObject<Dictionary<string, string>>(content);
-        HttpWebRequest request = (HttpWebRequest)WebRequest.Create(url);
-        request.Method = "POST";
-        request.ContentType = "application/json";
-        request.ContentLength = dataBytes.Length;
         if (result["message"] == "ok")
         {
-            using (Stream stream = request.GetRequestStream())
-            {
-                stream.Write(dataBytes, 0, dataBytes.Length);
-            }
+            return result["data"];
         }
+        // получение данных с сервера
+        return "fail";
     }
+    
     
 }
