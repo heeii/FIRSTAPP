@@ -49,13 +49,13 @@ public partial class registrationPage : ContentPage
                 Alert(get_sand);
             }
             else { 
-                s_aler = "email don`t correct";
+                s_aler = "invalid email address was entered";
                 Alert(s_aler);
             }
             
         }
         else {
-            s_aler = "password don`t correct";
+            s_aler = "password contains invalid characters";
             Alert(s_aler); 
         }
         
@@ -77,7 +77,7 @@ public partial class registrationPage : ContentPage
         {
             return result["data"];
         }
-        // получение данных с сервера
+        // ГЇГ®Г«ГіГ·ГҐГ­ГЁГҐ Г¤Г Г­Г­Г»Гµ Г± Г±ГҐГ°ГўГҐГ°Г 
         return "fail";
     }
     
