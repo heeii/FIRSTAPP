@@ -2,16 +2,22 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="TEST.loginPage"
-             Title="Note">
+             Title="Log In">
     <VerticalStackLayout Spacing="10" Margin="5">
+        <Label x:Name="Login_Lable"
+               Text="LOGIN"/>
         <Editor x:Name="Login_Place"
                 Text=""
                 Placeholder="Login"
-                HeightRequest="100" />
+                HeightRequest="25"
+                MaxLength="400"/>
+        <Label x:Name="Password_Lable"
+               Text="PASSWORD"/>
         <Editor x:Name="Password_Place"
                 Text=""
                 Placeholder="Password"
-                HeightRequest="100" />
+                HeightRequest="25" 
+                MaxLength="40"/>
 
         <Grid ColumnDefinitions="*,*" ColumnSpacing="4">
             <Button 

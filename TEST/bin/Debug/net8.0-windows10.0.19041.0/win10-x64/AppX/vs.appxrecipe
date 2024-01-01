@@ -29,7 +29,7 @@
     <AppXManifest Include="C:\Users\Andy\source\repos\FIRSTAPP\TEST\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2023-12-29T08:31:29.442</Modified>
+      <Modified>2023-12-30T13:44:23.267</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
@@ -43,11 +43,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Andy\source\repos\FIRSTAPP\TEST\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\TEST.dll">
       <PackagePath>TEST.dll</PackagePath>
-      <Modified>2023-12-29T08:31:29.176</Modified>
+      <Modified>2023-12-30T13:44:22.466</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Andy\source\repos\FIRSTAPP\TEST\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\apphost.exe">
       <PackagePath>TEST.exe</PackagePath>
-      <Modified>2023-12-29T08:31:29.192</Modified>
+      <Modified>2023-12-30T13:44:22.530</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Andy\source\repos\FIRSTAPP\TEST\Resources\Raw\AboutAssets.txt">
       <PackagePath>AboutAssets.txt</PackagePath>
