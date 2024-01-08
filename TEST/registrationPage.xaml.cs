@@ -40,7 +40,7 @@ public partial class registrationPage : ContentPage
         password = Password_Place.Text;
         check_Password= Password_Check_Place.Text;
         email = email_Place.Text;
-        if (password == check_Password & password !=""){
+        if (password == check_Password && password !=""){
             char ch = '@';
             bool isContain = IsContainChar(email, ch);
             if (isContain){
